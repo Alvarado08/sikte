@@ -71,4 +71,6 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    'url' => env('ADMIN_URL'),
+
 ];
