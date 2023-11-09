@@ -1,1 +1,1 @@
-<img class="w-full max-w-[15rem]" src="{{asset('logo.png')}}" alt="Brand Logo">
+<img class="w-full max-w-[10rem]" src="{{asset('logo.png')}}" alt="Brand Logo">
