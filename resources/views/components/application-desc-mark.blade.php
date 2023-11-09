@@ -1,0 +1,1 @@
+<img class="w-full max-w-[8rem]" src="{{asset('desc-logo.png')}}" alt="Brand Descriptive Logo">
