@@ -22,11 +22,9 @@
         @livewireStyles
     </head>
     <body>
-        <x-main-navbar/>
-        <main class="font-sans bg-white antialiased">
+        <main class="font-sans antialiased">
             {{ $slot }}
         </main>
-        <x-footer/>
         @livewireScripts
     </body>
 </html>
