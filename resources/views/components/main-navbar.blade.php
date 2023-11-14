@@ -22,7 +22,7 @@
                     </label>
                     <ul x-show="openmenu" tabindex="0" class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40 right-5">
                       <li><a href="{{ url('/') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Inicio</a></li>
-                      <li><a href="#" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Colleciones</a></li>
+                      <li><a href="{{url('/collections')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Colleciones</a></li>
                       @auth
                         <li>
                             <a href="{{ url('/dashboard') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Dashboard</a>
