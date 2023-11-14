@@ -10,7 +10,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Lato:wght@400;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,7 +23,7 @@
     </head>
     <body>
         <x-main-navbar/>
-        <main class="font-sans bg-white antialiased">
+        <main class="font-sans bg-white antialiased min-h-screen">
             {{ $slot }}
         </main>
         <x-footer/>

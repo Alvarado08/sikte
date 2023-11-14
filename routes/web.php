@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/collections', function () {
+    return view('collections');
+});
+
+Route::get('/products', function () {
+    return view('products');
+});
+
+Route::get('/product', function () {
+    return view('product');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

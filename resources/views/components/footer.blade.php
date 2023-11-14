@@ -4,7 +4,7 @@
         <a class="w-fit" href="#">Términos de Servicio</a>
         <a class="w-fit" href="#">Póliza de Envío</a>
         <a class="w-fit" href="#">Póliza de Reembolso</a>
-        <h5 class="font-bold">&copy; <span x-data="{date:new Date().getFullYear()}" x-text="date"></span>, <span>{{config('app.name')}}.</span> Todos los derechos reservados</h5>
+        <h5 class="font-bold">&copy; <span x-data="{date:new Date().getFullYear()}" x-text="date"></span>, <span>{{config('app.name')}}.</span> Todos los derechos reservados.</h5>
     </div>
     <div class="flex flex-col gap-2">
         <div class="flex items-center justify-end">

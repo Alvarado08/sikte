@@ -17,6 +17,7 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 primary: 'Lato, sans-serif',
                 secondary: 'Barlow, sans-serif',
+                desc: 'Roboto, sans-serif',
             },
             colors: {
                 secondary: '#755E39'

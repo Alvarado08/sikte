@@ -5,8 +5,8 @@
     <div class="self-center sm:flex sm:justify-center">
         <div>
             <h1 class="text-4xl md:text-6xl font-primary font-bold uppercase">visítanos</h1>
-            <div class="font-secondary text-secondary text-xl md:text-2xl font-semibold mt-4">
-                <p>San Juan, Calle 40 x 45 y 47, 97780</p>
+            <div class="font-desc text-secondary text-xl md:text-2xl font-semibold mt-4">
+                <p>Calle 40 x 47 y 49 238A, 97780</p>
                 <p>Valladolid, Yucatán, México</p>
                 <p>Lunes - Viernes, 9AM - 7PM</p>
             </div>
