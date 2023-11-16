@@ -1,4 +1,4 @@
-<footer class="pt-8 px-8 pb-3 flex items-end justify-between bg-black text-white text-sm sm:text-base">
+<footer class="py-3 px-8 flex items-end justify-between bg-black text-white text-sm sm:text-base">
     <div class="space-y-1 font-semibold font-primary flex flex-col">
         <a class="w-fit" href="#">Póliza de Privacidad</a>
         <a class="w-fit" href="#">Términos de Servicio</a>

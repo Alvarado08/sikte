@@ -1,6 +1,26 @@
-<nav x-data="{openmenu:false, openbag:false}" class="p-8">
+<nav x-data="{openmenu:false, openbag:false}" class="p-8 bg-white">
     @if (Route::has('login'))
         <div class="flex items-center justify-between">
+            {{-- Mobile Menu --}}
+            <div class="dropdown inline-block sm:hidden">
+              <label tabindex="0" class="">
+                <svg @click="openmenu = !openmenu; if(openbag)openbag=!openbag" @click.outside="if(openmenu)openmenu = !openmenu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hover:text-secondary/80 focus:text-secondary duration-300 hover:cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+              </label>
+              <ul x-show="openmenu" x-transition tabindex="0" class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
+                <li><a href="{{ url('/') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Inicio</a></li>
+                <li><a href="{{url('/collections')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Colecciones</a></li>
+                @auth
+                  <li>
+                      <a href="{{ url('/dashboard') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Dashboard</a>
+                  </li>
+                  @else
+                  <li>
+                      <a href="{{ route('login') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Log in</a>
+                  </li>
+                @endauth
+                  <li><a href="{{url('/contact')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Contáctanos</a></li>
+              </ul>
+            </div>
             <div>
                 <a href="{{url('/')}}">
                     <x-application-desc-mark/>
@@ -8,33 +28,13 @@
             </div>
             <div class="flex items-center gap-5 text-base font-primary md:text-xl">
                 <a href="{{ url('/') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Inicio</a>
-                <a href="{{url('/collections')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Colleciones</a>
+                <a href="{{url('/collections')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Colecciones</a>
                 @auth
                     <a href="{{ url('/dashboard') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Log in</a>
                 @endauth
-                <a href="#" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Contáctanos</a>
-                {{-- Mobile Menu --}}
-                <div class="dropdown inline-block sm:hidden">
-                    <label tabindex="0" class="">
-                      <svg @click="openmenu = !openmenu; if(openbag)openbag=!openbag" @click.outside="if(openmenu)openmenu = !openmenu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hover:text-secondary/80 focus:text-secondary duration-300 hover:cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                    </label>
-                    <ul x-show="openmenu" tabindex="0" class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40 right-5">
-                      <li><a href="{{ url('/') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Inicio</a></li>
-                      <li><a href="{{url('/collections')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Colleciones</a></li>
-                      @auth
-                        <li>
-                            <a href="{{ url('/dashboard') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Dashboard</a>
-                        </li>
-                        @else
-                        <li>
-                            <a href="{{ route('login') }}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Log in</a>
-                        </li>
-                      @endauth
-                        <li><a href="#" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300">Contáctanos</a></li>
-                    </ul>
-                </div>
+                <a href="{{url('/contact')}}" class="font-semibold hover:text-secondary/80 text-black focus:text-secondary duration-300 hidden sm:inline-block">Contáctanos</a>
                 {{-- Shopping Bag Menu --}}
                 <div class="dropdown dropdown-end top-0.5">
                     <label tabindex="0" class="">
@@ -57,6 +57,6 @@
                       </div>
                     </div>
                 </div>
-            </div>
+          </div>
     @endif
 </nav>

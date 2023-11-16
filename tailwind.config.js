@@ -20,7 +20,7 @@ export default {
                 desc: 'Roboto, sans-serif',
             },
             colors: {
-                secondary: '#755E39'
+                secondary: '#CBB658'
             },
         },
     },
