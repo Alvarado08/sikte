@@ -25,8 +25,8 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('')
-            ->domain(config('filament.url'))
+            ->path(config('filament.path'))
+            // ->domain(config('filament.url'))
             ->login()
             ->profile()
             ->colors([
