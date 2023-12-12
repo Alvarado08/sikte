@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Collections\CollectionIndex;
+use App\Livewire\Collections\CollectionShow;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/collections', function () {
-    return view('collections');
-});
+// Route::get('/collections', function () {
+//     return view('collections');
+// });
 
 Route::get('/products', function () {
     return view('products');
@@ -32,6 +34,10 @@ Route::get('/product', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// Collections
+Route::get('/collections',CollectionIndex::class);
+Route::get('/collections/{slug}',CollectionShow::class)->name('collections.show');
 
 Route::middleware([
     'auth:sanctum',
